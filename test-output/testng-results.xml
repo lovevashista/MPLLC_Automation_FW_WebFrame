@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="73248" started-at="2018-12-14T23:56:00Z" finished-at="2018-12-14T23:57:14Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="73248" started-at="2018-12-14T23:56:00Z" finished-at="2018-12-14T23:57:14Z">
+      <class name="MobileProgrammingLLC.WebFrameTests.GMail_Login">
+        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3023df74]" name="initConfigs" is-config="true" duration-ms="6230" started-at="2018-12-14T23:56:00Z" finished-at="2018-12-14T23:56:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initConfigs -->
+        <test-method status="PASS" signature="enterUserName()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3023df74]" name="enterUserName" duration-ms="44316" started-at="2018-12-14T23:56:07Z" finished-at="2018-12-14T23:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterUserName -->
+        <test-method status="PASS" signature="enterPassword()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3023df74]" name="enterPassword" duration-ms="4331" started-at="2018-12-14T23:56:51Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterUserName" finished-at="2018-12-14T23:56:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterPassword -->
+        <test-method status="PASS" signature="verifyErrorMesssage()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3023df74]" name="verifyErrorMesssage" duration-ms="1114" started-at="2018-12-14T23:56:55Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterPassword" finished-at="2018-12-14T23:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMesssage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3023df74]" name="tearDown" is-config="true" duration-ms="108" started-at="2018-12-14T23:56:56Z" finished-at="2018-12-14T23:56:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MobileProgrammingLLC.WebFrameTests.GMail_Login -->
+      <class name="MobileProgrammingLLC.WebFrameTests.Rediff_Login">
+        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4135c3b]" name="initConfigs" is-config="true" duration-ms="5106" started-at="2018-12-14T23:56:57Z" finished-at="2018-12-14T23:57:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initConfigs -->
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4135c3b]" name="rediff_enterUser" duration-ms="6521" started-at="2018-12-14T23:57:02Z" data-provider="getData" finished-at="2018-12-14T23:57:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aaa@aaa.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rediff_enterUser -->
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4135c3b]" name="rediff_enterUser" duration-ms="2603" started-at="2018-12-14T23:57:08Z" data-provider="getData" finished-at="2018-12-14T23:57:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bbb@bbb.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass222]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rediff_enterUser -->
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4135c3b]" name="rediff_enterUser" duration-ms="2595" started-at="2018-12-14T23:57:11Z" data-provider="getData" finished-at="2018-12-14T23:57:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ccc@ccc.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass333]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rediff_enterUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4135c3b]" name="tearDown" is-config="true" duration-ms="177" started-at="2018-12-14T23:57:13Z" finished-at="2018-12-14T23:57:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MobileProgrammingLLC.WebFrameTests.Rediff_Login -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
