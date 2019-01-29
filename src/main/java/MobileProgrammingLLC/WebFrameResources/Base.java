@@ -110,8 +110,10 @@ public class Base {
 		try {
 			Date d = new Date();
 			File f = new File("screens");
-			File src = new File(f,testCase+"_"+d.toString()+"_"+"ss.png");
+			String fileName = testCase+"_"+d.toString()+"_"+"ss.png";
+			File src = new File(f,fileName);
 			FileUtils.copyFile(s, src);
+			log.info("Screenshot taken! NAME: " + fileName);
 		} catch (IOException e) {
 			log.error("Capturing Screenshot failed.");
 		}
@@ -122,7 +124,8 @@ public class Base {
 			WebDriverWait w = new WebDriverWait(driver, 20);
 			w.until(ExpectedConditions.presenceOfElementLocated(ele));
 		}catch(Exception e) {
-			log.error("Element having locator '"+ele+"'"+" could not be located.");
+			log.error("Element having locator '"+ele+"'"+" could not be located. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
 	}
 	
@@ -145,10 +148,17 @@ public class Base {
 	}
 	
 	public  void flash(WebElement ele) {
-		String bgColor = ele.getCssValue("backgroundColor");
-		for(int i=0; i<2; i++) {
-			changeColor(ele, "rgb(173,255,47)");
-			changeColor(ele, bgColor);
+		try {
+			log.debug("Attempting to flash " + ele + "...");
+			String bgColor = ele.getCssValue("backgroundColor");
+			for(int i=0; i<2; i++) {
+				changeColor(ele, "rgb(173,255,47)");
+				changeColor(ele, bgColor);
+			}
+			log.info("Element successfully flashed");
+		}catch(Exception e) {
+			log.error("Flashing element failed. Taking screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
 	}
 	
@@ -166,80 +176,85 @@ public class Base {
 		try {
 			log.debug("Attempting to click on element: '"+ele+"'...");
 			ele.click();
+			log.info("Element '"+ele+"' successfully clicked.");
 		}catch(Exception e) {
-			log.error("Clicking element '"+ele+"' failed.");
+			log.error("Clicking element '"+ele+"' failed. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
-		log.info("Element '"+ele+"' successfully clicked.");
 	}
 	
 	public void enterContentInto(WebElement ele, String content) {
 		try {
 			log.debug("Attempting to send \""+ content + "\" to element \"" + ele + "\"...");
 			ele.sendKeys(content);
+			log.info("Content \"" + content + "\" entered successfully into element \"" + ele + "\"");
 		}catch(Exception e) {
-			log.error("Entering content into element '"+ele+"' failed.");
+			log.error("Entering content into element '"+ele+"' failed. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
-		log.info("Content \"" + content + "\" entered successfully into element \"" + ele + "\"");
 	}
 	
 	public void enterContentIntoAndSubmit(WebElement ele, String content) {
 		try {
 			log.debug("Attempting to send \""+ content + "\" to element \"" + ele + "\"...");
 			ele.sendKeys(content, Keys.ENTER);
+			log.info("Content \"" + content + "\" entered successfully into element \"" + ele + "\" and successfully submitted.");
 		}catch(Exception e) {
-			log.error("Entering content into element '"+ele+"' failed.");
+			log.error("Entering content into element '"+ele+"' failed. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
-		log.info("Content \"" + content + "\" entered successfully into element \"" + ele + "\" and successfully submitted.");
 	}
 	
 	public void compareContent(WebElement ele, String expected) {
 		try {
 			log.debug("Attempting to compare content returned by \"" + ele + "\" from \"" + expected + "\" ...");
 			Assert.assertEquals(ele.getText(), expected);
+			log.info("Comparison Successful!");
 		}catch(Exception e) {
-			log.error("Comparison Failed! Expected was '"+expected+"' but actual is '"+ele.getText()+"'");
+			log.error("Comparison Failed! Expected was '"+expected+"' but actual is '"+ele.getText()+"'. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
-		log.info("Comparison Successful!");
 	}
 	
 	public void compareContent(WebElement e1, WebElement e2) {
 		try {
 			log.debug("Attempting to compare content returned by \"" + e1 + "\" from \"" + e2 + "\" ...");
 			Assert.assertEquals(e1.getText(), e2.getText());
+			log.info("Comparison Successful!");
 		}catch(Exception e) {
-			log.error("Comparison Failed! Expected was '"+e2.getText()+"' but actual is '"+e1.getText()+"'");
+			log.error("Comparison Failed! Expected was '"+e2.getText()+"' but actual is '"+e1.getText()+"'. Taking Screenshot...");
+			captureScreen(e1.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
-		log.info("Comparison Successful!");
 	}
 	
 	public void compareContent(String s1, String s2) {
 		try {
 			log.debug("Attempting to compare content \"" + s1 + "\" from \"" + s2 + "\" ...");
 			Assert.assertEquals(s1, s2);
+			log.info("Comparison Successful!");
 		}catch(Exception e) {
 			log.error("Comparison Failed! Expected was '"+s2+"' but actual is '"+s1+"'");
 		}
-		log.info("Comparison Successful!");
 	}
 	
 	public void navigateToSite(WebDriver driver, String URL) {
 		try {
 			log.debug("Attempting to get navigated to URL: \"" + URL + "\"...");
 			driver.get(URL);
+			log.info("Navigation to site \"" + URL + "\" successful.");
 		}catch(Exception e) {
 			log.error("Navigation to site \""+ URL + "\" failed.");
 		}
-		log.info("Navigation to site \"" + URL + "\" successful.");
 	}
 	
 	public void deleteAllCookies(WebDriver driver) {
 		try {
 			log.debug("Attempting to delete all cookies...");
 			driver.manage().deleteAllCookies();
+			log.info("All cookies successfully deleted.");
 		}catch(Exception e) {
 			log.error("Deleting all cookies failed.");
 		}
-		log.info("All cookies successfully deleted.");
 	}
 	
 	public void isDisplayedOnPage(WebElement ele) {
@@ -249,7 +264,8 @@ public class Base {
 				log.info(ele + " is displayed on the page successfully.");
 			}
 		}catch(Exception e){
-			log.error("Presence of " + ele + " on the page failed.");
+			log.error("Presence of " + ele + " on the page failed. Taking Screenshot...");
+			captureScreen(ele.toString().replace("Proxy element for: DefaultElementLocator ", "Locator_"),driver);
 		}
 	}
 	
@@ -258,10 +274,9 @@ public class Base {
 			log.debug("Attempting to quit the driver...");
 			driver.quit();
 			driver = null;
+			log.info("Driver successfully quitted.");
 		}catch(Exception e) {
 			log.error("Quitting driver failed!");
 		}
-		log.info("Driver successfully quitted.");
 	}
-
 }

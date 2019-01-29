@@ -5,8 +5,6 @@
     <classes>
       <class name="MobileProgrammingLLC.WebFrameTests.GMail_Login">
         <methods>
-          <include name="verifyErrorMesssage"/>
-          <include name="enterPassword"/>
           <include name="initConfigs"/>
           <include name="enterUserName"/>
           <include name="tearDown"/>

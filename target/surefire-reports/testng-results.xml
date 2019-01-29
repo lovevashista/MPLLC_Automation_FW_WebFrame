@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="73983" started-at="2019-01-22T16:57:46Z" finished-at="2019-01-22T16:59:00Z">
+  <suite name="Suite" duration-ms="64838" started-at="2019-01-29T23:22:23Z" finished-at="2019-01-29T23:23:28Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="73983" started-at="2019-01-22T16:57:46Z" finished-at="2019-01-22T16:59:00Z">
+    <test name="Test1" duration-ms="64838" started-at="2019-01-29T23:22:23Z" finished-at="2019-01-29T23:23:28Z">
       <class name="MobileProgrammingLLC.WebFrameTests.GMail_Login">
-        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3911c2a7]" name="initConfigs" is-config="true" duration-ms="5424" started-at="2019-01-22T22:27:46Z" finished-at="2019-01-22T22:27:52Z">
+        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@4ac3c60d]" name="initConfigs" is-config="true" duration-ms="4785" started-at="2019-01-30T04:52:23Z" finished-at="2019-01-30T04:52:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initConfigs -->
-        <test-method status="PASS" signature="enterUserName()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3911c2a7]" name="enterUserName" duration-ms="44072" started-at="2019-01-22T22:27:52Z" finished-at="2019-01-22T22:28:36Z">
+        <test-method status="PASS" signature="enterUserName()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@4ac3c60d]" name="enterUserName" duration-ms="44345" started-at="2019-01-30T04:52:28Z" finished-at="2019-01-30T04:53:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterUserName -->
-        <test-method status="PASS" signature="enterPassword()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3911c2a7]" name="enterPassword" duration-ms="4321" started-at="2019-01-22T22:28:36Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterUserName" finished-at="2019-01-22T22:28:40Z">
+        <test-method status="PASS" signature="enterPassword()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@4ac3c60d]" name="enterPassword" duration-ms="4337" started-at="2019-01-30T04:53:12Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterUserName" finished-at="2019-01-30T04:53:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterPassword -->
-        <test-method status="PASS" signature="verifyErrorMesssage()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3911c2a7]" name="verifyErrorMesssage" duration-ms="1184" started-at="2019-01-22T22:28:40Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterPassword" finished-at="2019-01-22T22:28:41Z">
+        <test-method status="PASS" signature="verifyErrorMesssage()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@4ac3c60d]" name="verifyErrorMesssage" duration-ms="1137" started-at="2019-01-30T04:53:17Z" depends-on-methods="MobileProgrammingLLC.WebFrameTests.GMail_Login.enterPassword" finished-at="2019-01-30T04:53:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMesssage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@3911c2a7]" name="tearDown" is-config="true" duration-ms="124" started-at="2019-01-22T22:28:41Z" finished-at="2019-01-22T22:28:42Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.GMail_Login@4ac3c60d]" name="tearDown" is-config="true" duration-ms="139" started-at="2019-01-30T04:53:18Z" finished-at="2019-01-30T04:53:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- MobileProgrammingLLC.WebFrameTests.GMail_Login -->
       <class name="MobileProgrammingLLC.WebFrameTests.Rediff_Login">
-        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4facf68f]" name="initConfigs" is-config="true" duration-ms="5435" started-at="2019-01-22T22:28:42Z" finished-at="2019-01-22T22:28:47Z">
+        <test-method status="PASS" signature="initConfigs()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@76508ed1]" name="initConfigs" is-config="true" duration-ms="1997" started-at="2019-01-30T04:53:18Z" finished-at="2019-01-30T04:53:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initConfigs -->
-        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4facf68f]" name="rediff_enterUser" duration-ms="6715" started-at="2019-01-22T22:28:47Z" data-provider="getData" finished-at="2019-01-22T22:28:54Z">
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@76508ed1]" name="rediff_enterUser" duration-ms="2707" started-at="2019-01-30T04:53:20Z" data-provider="getData" finished-at="2019-01-30T04:53:23Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rediff_enterUser -->
-        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4facf68f]" name="rediff_enterUser" duration-ms="3583" started-at="2019-01-22T22:28:54Z" data-provider="getData" finished-at="2019-01-22T22:28:57Z">
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@76508ed1]" name="rediff_enterUser" duration-ms="2602" started-at="2019-01-30T04:53:23Z" data-provider="getData" finished-at="2019-01-30T04:53:25Z">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rediff_enterUser -->
-        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4facf68f]" name="rediff_enterUser" duration-ms="2904" started-at="2019-01-22T22:28:57Z" data-provider="getData" finished-at="2019-01-22T22:29:00Z">
+        <test-method status="PASS" signature="rediff_enterUser(java.lang.String, java.lang.String)[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@76508ed1]" name="rediff_enterUser" duration-ms="2612" started-at="2019-01-30T04:53:25Z" data-provider="getData" finished-at="2019-01-30T04:53:28Z">
           <params>
             <param index="0">
               <value>
@@ -81,7 +81,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rediff_enterUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@4facf68f]" name="tearDown" is-config="true" duration-ms="141" started-at="2019-01-22T22:29:00Z" finished-at="2019-01-22T22:29:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileProgrammingLLC.WebFrameTests.Rediff_Login@76508ed1]" name="tearDown" is-config="true" duration-ms="140" started-at="2019-01-30T04:53:28Z" finished-at="2019-01-30T04:53:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
